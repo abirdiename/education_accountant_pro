@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мой курс — Бухгалтер PRO</title>
+<link rel="preconnect" href="https://yastatic.net" crossorigin>
+<style>
+@font-face { font-family: 'YS Text'; src: url('https://yastatic.net/s3/home/fonts/ys/4/text-regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'YS Text'; src: url('https://yastatic.net/s3/home/fonts/ys/4/text-medium.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'YS Text'; src: url('https://yastatic.net/s3/home/fonts/ys/4/text-bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'YS Display Cond'; src: url('https://yastatic.net/s3/home/fonts/ys/4/display-cond-bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'YS Display Cond'; src: url('https://yastatic.net/s3/home/fonts/ys/4/display-cond-black.woff2') format('woff2'); font-weight: 900; font-display: swap; }
+</style>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a href="dashboard.html" class="logo">📚 Бухгалтер <span>PRO</span></a>
+    <nav class="nav" id="user-nav"></nav>
+  </div>
+</header>
+
+<div class="container dashboard">
+
+  <div class="welcome-card">
+    <div class="welcome-text">
+      <h2 id="greeting">Привет!</h2>
+      <p id="subtitle">Готовы продолжить приключение?</p>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-value" id="level">1</div>
+        <div class="stat-label">Уровень</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" id="xp">0</div>
+        <div class="stat-label">Опыт</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" id="badges-count">0</div>
+        <div class="stat-label">Бейджи</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress-section">
+    <div class="progress-info">
+      <span>Прогресс по курсу</span>
+      <span id="progress-text">0 из 7 модулей</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar" id="progress-bar" style="width: 0%"></div>
+    </div>
+  </div>
+
+  <h2>Программа курса</h2>
+  <div id="modules-list" class="modules-list"></div>
+
+  <div id="certificate-cta" class="cert-cta" style="display: none;">
+    <div class="cert-cta-text">
+      <h3>🎓 Поздравляем! Курс пройден</h3>
+      <p>Заберите ваш именной сертификат</p>
+    </div>
+    <a href="certificate.html" class="btn">Получить сертификат</a>
+  </div>
+
+</div>
+
+<script src="js/course-data.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

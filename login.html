@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вход — Бухгалтер PRO</title>
+<link rel="preconnect" href="https://yastatic.net" crossorigin>
+<style>
+@font-face { font-family: 'YS Text'; src: url('https://yastatic.net/s3/home/fonts/ys/4/text-regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'YS Text'; src: url('https://yastatic.net/s3/home/fonts/ys/4/text-medium.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'YS Text'; src: url('https://yastatic.net/s3/home/fonts/ys/4/text-bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'YS Display Cond'; src: url('https://yastatic.net/s3/home/fonts/ys/4/display-cond-bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'YS Display Cond'; src: url('https://yastatic.net/s3/home/fonts/ys/4/display-cond-black.woff2') format('woff2'); font-weight: 900; font-display: swap; }
+</style>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a href="index.html" class="logo">📚 Бухгалтер <span>PRO</span></a>
+    <nav class="nav">
+      <a href="register.html">Регистрация</a>
+    </nav>
+  </div>
+</header>
+
+<section class="auth-section">
+  <div class="auth-box">
+    <h2>С возвращением!</h2>
+    <p class="sub">Аня уже соскучилась 👋</p>
+    <div class="error" id="login-error"></div>
+    <form onsubmit="login(event)">
+      <input type="email" id="login-email" placeholder="Email" required>
+      <input type="password" id="login-password" placeholder="Пароль" required>
+      <button type="submit" class="btn full-width">Войти</button>
+    </form>
+    <div class="auth-switch">
+      Нет аккаунта? <a href="register.html">Зарегистрироваться</a>
+    </div>
+  </div>
+</section>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

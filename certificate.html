@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сертификат — Бухгалтер PRO</title>
+<link rel="preconnect" href="https://yastatic.net" crossorigin>
+<style>
+@font-face { font-family: 'YS Text'; src: url('https://yastatic.net/s3/home/fonts/ys/4/text-regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'YS Text'; src: url('https://yastatic.net/s3/home/fonts/ys/4/text-medium.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'YS Text'; src: url('https://yastatic.net/s3/home/fonts/ys/4/text-bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'YS Display Cond'; src: url('https://yastatic.net/s3/home/fonts/ys/4/display-cond-bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'YS Display Cond'; src: url('https://yastatic.net/s3/home/fonts/ys/4/display-cond-black.woff2') format('woff2'); font-weight: 900; font-display: swap; }
+</style>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="no-print">
+  <div class="container header-inner">
+    <a href="dashboard.html" class="logo">📚 Бухгалтер <span>PRO</span></a>
+    <nav class="nav" id="user-nav"></nav>
+  </div>
+</header>
+
+<div class="container certificate-page">
+  <a href="dashboard.html" class="back-link no-print">← К программе</a>
+
+  <div class="certificate">
+    <div class="seal">🎓</div>
+    <h1>Сертификат</h1>
+    <p>Настоящим подтверждается, что</p>
+    <div class="cert-name" id="cert-name">Имя</div>
+    <p>успешно прошёл(а) курс</p>
+    <p class="cert-course">«Авансовые отчёты без боли»</p>
+    <p>и освоил(а) все 7 модулей программы</p>
+    <p class="cert-date" id="cert-date">Дата</p>
+  </div>
+
+  <div class="cert-actions no-print">
+    <button class="btn" onclick="window.print()">🖨 Распечатать</button>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+<script>
+  requireAuth();
+  document.getElementById('cert-name').textContent = currentUser.name;
+  document.getElementById('cert-date').textContent = new Date().toLocaleDateString('ru-RU', {
+    day: 'numeric', month: 'long', year: 'numeric'
+  });
+  renderUserNav();
+</script>
+</body>
+</html>
