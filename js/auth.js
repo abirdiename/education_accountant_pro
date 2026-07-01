@@ -23,10 +23,13 @@ function loadCurrentUser() {
 
 function register(e) {
   e.preventDefault();
-  const name = document.getElementById('reg-name').value.trim();
+  const company = document.getElementById('reg-company').value.trim();
+  const lastName = document.getElementById('reg-lastname').value.trim();
+  const firstName = document.getElementById('reg-firstname').value.trim();
+  const phone = document.getElementById('reg-phone').value.trim();
   const email = document.getElementById('reg-email').value.trim().toLowerCase();
-  const role = document.getElementById('reg-role').value;
   const password = document.getElementById('reg-password').value;
+  const name = `${firstName} ${lastName}`.trim();
 
   const users = getUsers();
   if (users[email]) {
@@ -35,7 +38,7 @@ function register(e) {
   }
 
   users[email] = {
-    name, email, role, password,
+    name, firstName, lastName, company, phone, email, password,
     registeredAt: new Date().toISOString(),
     progress: {},
     xp: 0,

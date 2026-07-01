@@ -31,18 +31,11 @@
     <p class="sub">Создайте аккаунт и присоединяйтесь к Ане 🎓</p>
     <div class="error" id="reg-error"></div>
     <form onsubmit="register(event)">
-      <input type="text" id="reg-name" placeholder="Как к вам обращаться?" required>
-      <input type="email" id="reg-email" placeholder="Email" required>
-      <select id="reg-role" required>
-        <option value="">Ваша должность</option>
-        <option value="Бухгалтер">Бухгалтер</option>
-        <option value="Главный бухгалтер">Главный бухгалтер</option>
-        <option value="Финансовый директор">Финансовый директор</option>
-        <option value="HR">HR-специалист</option>
-        <option value="Тревел-менеджер">Тревел-менеджер</option>
-        <option value="Руководитель">Руководитель / Собственник</option>
-        <option value="Другое">Другое</option>
-      </select>
+      <input type="text" id="reg-company" placeholder="Ваша компания" required>
+      <input type="text" id="reg-lastname" placeholder="Фамилия" required>
+      <input type="text" id="reg-firstname" placeholder="Имя" required>
+      <input type="tel" id="reg-phone" placeholder="Телефон" required>
+      <input type="email" id="reg-email" placeholder="Электронная почта" required>
       <input type="password" id="reg-password" placeholder="Пароль (минимум 6 символов)" required minlength="6">
       <button type="submit" class="btn full-width">Создать аккаунт</button>
     </form>
